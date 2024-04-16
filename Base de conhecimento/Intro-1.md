@@ -295,4 +295,132 @@ Em JavaScript, os operadores são símbolos especiais que realizam operações e
 
 Esses são apenas alguns dos principais operadores em JavaScript. Eles são fundamentais para realizar uma variedade de tarefas, desde operações matemáticas simples até manipulação de dados complexos.
 
+## Controle de fluxo
+
+O controle de fluxo em JavaScript refere-se à maneira como você pode direcionar o fluxo de execução do seu código com base em condições e iterações. Existem várias construções de controle de fluxo em JavaScript que permitem controlar como o seu código é executado. Aqui estão algumas das principais:
+
+1. **Instruções Condicionais:**
+   - As instruções condicionais permitem executar diferentes blocos de código com base em condições específicas.
+   - A estrutura básica é o `if`, que avalia uma expressão e executa um bloco de código se a expressão for verdadeira.
+   ```javascript
+   if (condição) {
+       // bloco de código se a condição for verdadeira
+   }
+   ```
+
+2. **Else e Else If:**
+   - Você pode estender o `if` com `else` para executar um bloco de código alternativo se a condição for falsa.
+   - Além disso, você pode encadear várias condições com `else if` para lidar com múltiplas possibilidades.
+   ```javascript
+   if (condição1) {
+       // bloco de código se condição1 for verdadeira
+   } else if (condição2) {
+       // bloco de código se condição1 for falsa e condição2 for verdadeira
+   } else {
+       // bloco de código se todas as condições anteriores forem falsas
+   }
+   ```
+
+3. **Operador Ternário:**
+   - O operador ternário é uma forma concisa de escrever instruções condicionais em uma única linha.
+   - Ele consiste em uma expressão seguida por `?`, seguida por duas expressões separadas por `:`. Se a expressão inicial for verdadeira, a primeira expressão é executada; caso contrário, a segunda expressão é executada.
+   ```javascript
+   var resultado = (condição) ? expressãoVerdadeira : expressãoFalsa;
+   ```
+
+4. **Loops:**
+   - Os loops permitem repetir a execução de um bloco de código várias vezes até que uma condição seja atendida.
+   - O loop `for` é comumente usado para iterar sobre uma sequência de valores.
+   ```javascript
+   for (inicialização; condição; incremento) {
+       // bloco de código a ser repetido
+   }
+   ```
+
+5. **Loop While:**
+   - O loop `while` executa um bloco de código enquanto uma condição especificada for verdadeira.
+   ```javascript
+   while (condição) {
+       // bloco de código a ser repetido
+   }
+   ```
+
+6. **Loop Do-While:**
+   - O loop `do-while` é semelhante ao `while`, mas garante que o bloco de código seja executado pelo menos uma vez, mesmo se a condição for falsa.
+   ```javascript
+   do {
+       // bloco de código a ser repetido
+   } while (condição);
+   ```
+
+7. **Loop For...In e For...Of:**
+   - Os loops `for...in` e `for...of` são usados para iterar sobre propriedades de um objeto ou elementos de uma coleção, como arrays.
+   ```javascript
+   for (variável in objeto) {
+       // bloco de código para cada propriedade do objeto
+   }
+
+   for (variável of coleção) {
+       // bloco de código para cada elemento da coleção
+   }
+   ```
+
+8. **Break e Continue:**
+   - As instruções `break` e `continue` são usadas dentro de loops para controlar o fluxo de execução.
+   - `break` é usado para sair do loop completamente, enquanto `continue` pula para a próxima iteração do loop.
+
+Essas são algumas das principais construções de controle de fluxo em JavaScript que permitem controlar o comportamento do seu código com base em condições e iterações. Dominar esses conceitos é essencial para escrever código JavaScript funcional e eficiente.
+
+## Controle de erros
+
+O controle de erros em JavaScript é essencial para lidar com situações inesperadas que podem ocorrer durante a execução do seu código. Isso inclui erros de sintaxe, erros de tempo de execução e erros lógicos. Aqui estão algumas maneiras de lidar com o controle de erros em JavaScript:
+
+1. **Declaração `try...catch`:**
+   - Você pode usar a declaração `try...catch` para tentar executar um bloco de código e capturar qualquer erro que ocorra durante a execução desse bloco.
+   - O bloco `try` contém o código que você deseja executar, enquanto o bloco `catch` é usado para lidar com qualquer exceção (erro) que ocorra durante a execução do bloco `try`.
+   ```javascript
+   try {
+       // Bloco de código que pode gerar um erro
+   } catch (erro) {
+       // Bloco de código para lidar com o erro
+   }
+   ```
+
+2. **`throw` para Gerar Erros:**
+   - Você pode usar a palavra-chave `throw` para gerar um erro manualmente em seu código.
+   - Isso pode ser útil quando você deseja sinalizar condições de erro específicas ou criar suas próprias exceções personalizadas.
+   ```javascript
+   throw new Error('Mensagem de erro aqui');
+   ```
+
+3. **Objeto `Error`:**
+   - O objeto `Error` é usado para representar erros em tempo de execução.
+   - Ele contém informações sobre o erro, como a mensagem de erro e o rastreamento de pilha.
+   ```javascript
+   try {
+       // Bloco de código que pode gerar um erro
+   } catch (erro) {
+       console.error(erro.message);
+       console.error(erro.stack);
+   }
+   ```
+
+4. **`finally`:**
+   - Você pode usar o bloco `finally` após o bloco `try...catch` para especificar um bloco de código que será executado, independentemente de ocorrer ou não uma exceção.
+   - Isso é útil para ações de limpeza, como fechar recursos abertos.
+   ```javascript
+   try {
+       // Bloco de código que pode gerar um erro
+   } catch (erro) {
+       // Bloco de código para lidar com o erro
+   } finally {
+       // Bloco de código a ser executado sempre
+   }
+   ```
+
+5. **Gestão de Erros Assíncronos:**
+   - Ao trabalhar com código assíncrono, como promessas ou funções de retorno de chamada, é importante lidar com erros de forma apropriada.
+   - Você pode usar `try...catch` dentro de uma função assíncrona ou encadear um método `.catch()` em uma promessa para lidar com erros assíncronos.
+
+Lidar adequadamente com o controle de erros em JavaScript é crucial para garantir que seu código seja robusto e resiliente a falhas. Isso ajuda a tornar suas aplicações mais confiáveis e a melhorar a experiência do usuário final.
 
