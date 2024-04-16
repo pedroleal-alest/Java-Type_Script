@@ -156,3 +156,36 @@ let myArray = [1, 2, 3, 3, 4, 5];
 let lastIndex = myArray.lastIndexOf(3);
 console.log(lastIndex); // Saída: 3 (último índice do elemento 3)
 ```
+
+### Percorrer array
+
+Para percorrer uma lista em JavaScript, você pode usar várias abordagens, como loops `for`, `for...of`, ou métodos como `forEach()`. Aqui estão algumas maneiras de percorrer uma lista:
+
+1. **Loop `for`**:
+   O loop `for` é uma maneira tradicional de percorrer uma lista. Você pode usar o índice para acessar cada elemento da lista.
+   ```javascript
+   let myList = [1, 2, 3, 4, 5];
+   for (let i = 0; i < myList.length; i++) {
+       console.log(myList[i]);
+   }
+   ```
+
+2. **Loop `for...of`**:
+   O loop `for...of` é uma forma mais moderna e concisa de percorrer uma lista. Ele permite acessar diretamente o valor de cada elemento, em vez de usar um índice.
+   ```javascript
+   let myList = [1, 2, 3, 4, 5];
+   for (let item of myList) {
+       console.log(item);
+   }
+   ```
+
+3. **Método `forEach()`**:
+   O método `forEach()` é uma maneira conveniente de percorrer uma lista. Ele executa uma função de callback para cada elemento da lista.
+   ```javascript
+   let myList = [1, 2, 3, 4, 5];
+   myList.forEach(function(item) {
+       console.log(item);
+   });
+   ```
+
+Cada uma dessas abordagens tem suas próprias vantagens e pode ser usada dependendo das suas necessidades e preferências. O loop `for` é mais versátil e pode ser usado em situações onde você precisa acessar o índice dos elementos. O loop `for...of` e o método `forEach()` são mais concisos e geralmente são preferidos para iterações simples sobre os elementos da lista.
