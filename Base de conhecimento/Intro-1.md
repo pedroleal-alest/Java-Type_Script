@@ -133,3 +133,58 @@ function exampleConst() {
 exampleConst();
 ```
 Neste exemplo, a variável `z` é declarada como uma constante usando `const`, o que significa que seu valor não pode ser alterado depois de ser inicializado. Qualquer tentativa de reatribuir um valor resultará em um erro.
+
+## Operadores
+
+Em JavaScript, os operadores são símbolos especiais que realizam operações em variáveis e valores. Eles são usados para realizar operações matemáticas, comparações, atribuições e outras tarefas. Vou descrever alguns dos principais tipos de operadores em JavaScript:
+
+1. **Operadores Aritméticos:** São usados para realizar operações matemáticas em números. Alguns exemplos incluem:
+   - `+` (adição)
+   - `-` (subtração)
+   - `*` (multiplicação)
+   - `/` (divisão)
+   - `%` (módulo, retorna o resto da divisão)
+   - `++` (incremento)
+   - `--` (decremento)
+
+2. **Operadores de Atribuição:** São usados para atribuir valores a variáveis. Por exemplo:
+   - `=` (atribuição simples)
+   - `+=` (adiciona e atribui)
+   - `-=` (subtrai e atribui)
+   - `*=` (multiplica e atribui)
+   - `/=` (divide e atribui)
+   - `%=` (calcula o módulo e atribui)
+
+3. **Operadores de Comparação:** São usados para comparar valores. Eles retornam verdadeiro (`true`) ou falso (`false`). Exemplos incluem:
+   - `==` (igual a, verifica igualdade de valor)
+   - `===` (igual a e igual em tipo, verifica igualdade de valor e tipo)
+   - `!=` (diferente de)
+   - `!==` (diferente de e diferente em tipo)
+   - `>` (maior que)
+   - `<` (menor que)
+   - `>=` (maior ou igual a)
+   - `<=` (menor ou igual a)
+
+4. **Operadores Lógicos:** São usados para combinar ou inverter valores booleanos. Alguns exemplos são:
+   - `&&` (e lógico, retorna verdadeiro se ambas as expressões forem verdadeiras)
+   - `||` (ou lógico, retorna verdadeiro se pelo menos uma das expressões for verdadeira)
+   - `!` (negação lógica, inverte o valor booleano)
+
+5. **Operadores de Concatenação de Strings:** São usados para unir strings. Por exemplo:
+   - `+` (concatenação)
+
+6. **Operadores Ternários:** É uma forma abreviada de uma estrutura de controle `if...else`. Sintaxe: `condição ? expressão1 : expressão2`. Se a condição for verdadeira, `expressão1` é avaliada, caso contrário, `expressão2` é avaliada.
+
+7. **Operadores de Tipo:** Permitem verificar o tipo de um valor. Por exemplo:
+   - `typeof` (retorna o tipo de uma expressão)
+   - `instanceof` (verifica se um objeto é uma instância de outro)
+
+8. **Operadores Bitwise:** São usados para manipular números em nível de bit. Alguns exemplos incluem:
+   - `&` (AND bitwise)
+   - `|` (OR bitwise)
+   - `^` (XOR bitwise)
+   - `<<` (shift left)
+   - `>>` (shift right)
+   - `>>>` (shift right sem sinal)
+
+Esses são apenas alguns dos principais operadores em JavaScript. Eles são fundamentais para realizar uma variedade de tarefas, desde operações matemáticas simples até manipulação de dados complexos.
