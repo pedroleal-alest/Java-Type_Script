@@ -49,6 +49,61 @@ A sintaxe em JavaScript é a estrutura e a forma que você usa para escrever có
 
 Entender e aplicar corretamente a sintaxe em JavaScript é fundamental para escrever código claro, conciso e funcional. A prática regular e a familiarização com os conceitos básicos ajudarão você a se tornar mais confortável com a linguagem.
 
+## Escopos
+
+Em JavaScript, o escopo refere-se à acessibilidade e visibilidade de variáveis, funções e outros identificadores em diferentes partes do código. O escopo determina onde as variáveis e funções podem ser acessadas e modificadas dentro de um programa. Existem dois principais tipos de escopos em JavaScript: escopo global e escopo local.
+
+1. **Escopo Global:**
+   - Variáveis declaradas fora de qualquer função têm escopo global.
+   - Variáveis globais podem ser acessadas de qualquer lugar no código, dentro ou fora de funções.
+   - Variáveis globais são geralmente declaradas usando a palavra-chave `var`, `let` ou `const` fora de qualquer bloco de código.
+
+   Exemplo de escopo global:
+   ```javascript
+   var nome = 'João'; // Variável global
+
+   function exibirNome() {
+       console.log(nome); // Variável global acessível dentro da função
+   }
+
+   exibirNome(); // Output: 'João'
+   ```
+
+2. **Escopo Local:**
+   - Variáveis declaradas dentro de uma função têm escopo local.
+   - Variáveis locais só podem ser acessadas dentro da função em que foram declaradas.
+   - Quando você declara uma variável dentro de uma função sem usar `var`, `let` ou `const`, ela se torna uma variável global.
+
+   Exemplo de escopo local:
+   ```javascript
+   function saudacao() {
+       var mensagem = 'Olá!'; // Variável local
+
+       console.log(mensagem); // Variável local acessível dentro da função
+   }
+
+   saudacao(); // Output: 'Olá!'
+   console.log(mensagem); // Erro: mensagem is not defined
+   ```
+
+3. **Escopo de Bloco (a partir do ECMAScript 6):**
+   - Variáveis declaradas com `let` e `const` têm escopo de bloco, o que significa que são acessíveis apenas dentro do bloco de código em que foram declaradas.
+   - Um bloco de código é delimitado por chaves `{}` em JavaScript.
+   - Variáveis declaradas com `var` têm escopo de função, não de bloco.
+
+   Exemplo de escopo de bloco:
+   ```javascript
+   if (true) {
+       let x = 10; // Variável com escopo de bloco
+       var y = 20; // Variável com escopo de função
+   }
+
+   console.log(x); // ReferenceError: x is not defined
+   console.log(y); // Output: 20
+   ```
+
+Entender o escopo é crucial para escrever código JavaScript limpo e evitar problemas de variáveis indefinidas ou inesperadas. O uso correto de variáveis locais e globais pode melhorar a legibilidade e a manutenibilidade do código.
+
 ## Tipos primitivos
 
 Em JavaScript, os tipos primitivos são tipos de dados simples e imutáveis que representam valores básicos. Eles são chamados de primitivos porque não são objetos e não possuem métodos. Aqui estão os principais tipos primitivos em JavaScript:
@@ -239,3 +294,5 @@ Em JavaScript, os operadores são símbolos especiais que realizam operações e
    - `>>>` (shift right sem sinal)
 
 Esses são apenas alguns dos principais operadores em JavaScript. Eles são fundamentais para realizar uma variedade de tarefas, desde operações matemáticas simples até manipulação de dados complexos.
+
+
