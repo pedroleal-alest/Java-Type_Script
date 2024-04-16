@@ -49,6 +49,57 @@ A sintaxe em JavaScript é a estrutura e a forma que você usa para escrever có
 
 Entender e aplicar corretamente a sintaxe em JavaScript é fundamental para escrever código claro, conciso e funcional. A prática regular e a familiarização com os conceitos básicos ajudarão você a se tornar mais confortável com a linguagem.
 
+## Tipos primitivos
+
+Em JavaScript, os tipos primitivos são tipos de dados simples e imutáveis que representam valores básicos. Eles são chamados de primitivos porque não são objetos e não possuem métodos. Aqui estão os principais tipos primitivos em JavaScript:
+
+1. **String:** Representa uma sequência de caracteres. As strings são criadas usando aspas simples (`'`) ou aspas duplas (`"`).
+   
+   Exemplo:
+   ```javascript
+   let nome = 'João';
+   ```
+
+2. **Number:** Representa números, inteiros ou de ponto flutuante. Também inclui valores especiais como `Infinity`, `-Infinity` e `NaN` (Not a Number).
+
+   Exemplo:
+   ```javascript
+   let idade = 30;
+   let altura = 1.75;
+   ```
+
+3. **Boolean:** Representa um valor lógico, `true` (verdadeiro) ou `false` (falso).
+
+   Exemplo:
+   ```javascript
+   let solteiro = true;
+   ```
+
+4. **Null:** Representa a ausência intencional de qualquer valor ou objeto. Em JavaScript, `null` é considerado um tipo primitivo, mas é um valor único que representa a ausência de valor.
+
+   Exemplo:
+   ```javascript
+   let endereco = null;
+   ```
+
+5. **Undefined:** Representa uma variável que foi declarada, mas ainda não foi atribuída um valor. Quando uma variável é declarada sem atribuição de valor, seu valor é `undefined`.
+
+   Exemplo:
+   ```javascript
+   let telefone;
+   ```
+
+6. **Symbol (a partir do ECMAScript 6):** Representa um valor único e imutável, geralmente usado como identificador único para propriedades de objetos.
+
+   Exemplo:
+   ```javascript
+   const corAzul = Symbol('azul');
+   ```
+
+Os tipos primitivos em JavaScript são passados por valor, o que significa que quando você atribui um valor primitivo a uma variável, uma cópia real desse valor é feita. Isso contrasta com os tipos de referência, como objetos e arrays, que são passados por referência.
+
+Entender os tipos primitivos em JavaScript é fundamental para entender como os dados são manipulados e como os valores são comparados e atribuídos.
+
 ## Variáveis
 
 Em JavaScript, as variáveis são usadas para armazenar dados. Elas são essenciais para qualquer programa, pois permitem que você armazene valores e os manipule conforme necessário. Aqui está uma descrição das variáveis em JavaScript:
