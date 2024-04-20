@@ -283,3 +283,56 @@ Funcionalidades em conjuntos (Sets):
      ```
 
 Essas funcionalidades oferecem maneiras flexíveis e convenientes de trabalhar com conjuntos em JavaScript, permitindo iteração, conversão para outros tipos de coleções e verificação de condições sobre os elementos do conjunto.
+
+## Arrays Tipados (Typed Arrays)
+
+Os Arrays Tipados (Typed Arrays) em JavaScript são uma adição poderosa ao conjunto de estruturas de dados disponíveis na linguagem. Eles são especialmente úteis quando se trabalha com dados numéricos ou binários, fornecendo um mecanismo eficiente para armazenar e manipular grandes conjuntos de números.
+
+Os Arrays Tipados são diferentes dos arrays regulares em JavaScript porque eles lidam com dados em um nível mais baixo, especificando o tipo de dados que podem ser armazenados dentro deles. Isso permite uma manipulação mais eficiente de grandes conjuntos de dados, pois elimina a necessidade de conversão de tipos durante operações.
+
+Existem diferentes tipos de Arrays Tipados, cada um otimizado para um tipo específico de dados, como inteiros de 8 bits, inteiros de 16 bits, inteiros de 32 bits, números de ponto flutuante de 32 bits, números de ponto flutuante de 64 bits, entre outros.
+
+Aqui estão alguns métodos comuns que podem ser usados com Arrays Tipados:
+
+1. **`set(index, value)`**: Define o valor do elemento na posição especificada pelo índice.
+
+   ```javascript
+   let myArray = new Int32Array(3);
+   myArray.set(0, 10);
+   myArray.set(1, 20);
+   myArray.set(2, 30);
+   ```
+
+2. **`get(index)`**: Retorna o valor do elemento na posição especificada pelo índice.
+
+   ```javascript
+   let value = myArray.get(1); // Retorna 20
+   ```
+
+3. **`length`**: Propriedade que retorna o número de elementos no array.
+
+   ```javascript
+   let length = myArray.length; // Retorna 3
+   ```
+
+4. **Iteração com `for`**: Arrays Tipados podem ser iterados usando um loop `for`.
+
+   ```javascript
+   for (let i = 0; i < myArray.length; i++) {
+       console.log(myArray[i]);
+   }
+   ```
+
+5. **`subarray(begin, end)`**: Retorna uma nova visão do array, abrangendo os elementos entre os índices `begin` e `end`, sem modificar o array original.
+
+   ```javascript
+   let sub = myArray.subarray(1, 2); // Retorna um novo array com os elementos 20 e 30
+   ```
+
+6. **`slice(begin, end)`**: Similar ao método `subarray`, retorna uma cópia dos elementos entre os índices `begin` e `end`, mas retorna um novo array em vez de uma visão.
+
+   ```javascript
+   let sliced = myArray.slice(1, 2); // Retorna [20]
+   ```
+
+Esses são apenas alguns dos métodos e propriedades disponíveis para Arrays Tipados. Eles oferecem um alto desempenho ao manipular grandes conjuntos de dados numéricos em JavaScript, tornando-os uma escolha popular para tarefas que exigem eficiência e velocidade.
