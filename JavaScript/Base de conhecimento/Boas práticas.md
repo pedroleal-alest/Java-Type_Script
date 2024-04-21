@@ -20,6 +20,110 @@ HJá várias boas práticas em JavaScript que podem ajudar a tornar seu código 
 
 9. **Testes unitários**: Escreva testes unitários para o seu código, especialmente para funções críticas e componentes importantes. Isso ajuda a garantir que seu código funcione conforme o esperado e facilita a detecção de regressões quando você faz alterações no código.
 
+## Exemplos:
+
+Um exemplo para cada uma das boas práticas mencionadas:
+
+1. **Nomenclatura descritiva de variáveis**:
+```javascript
+// Exemplo de nomenclatura descritiva
+let idadeUsuario = 25;
+let nomeCompleto = "João Silva";
+```
+
+2. **Use let/const em vez de var**:
+```javascript
+// Exemplo de uso de let/const
+const PI = 3.14;
+let raio = 5;
+let area = PI * raio * raio;
+```
+
+3. **Evite poluir o escopo global**:
+```javascript
+// Exemplo de encapsulamento de código
+(function() {
+  // Seu código aqui
+})();
+```
+
+4. **Use 'strict mode'**:
+```javascript
+// Exemplo de uso de 'strict mode'
+'use strict';
+
+let x = 10;
+```
+
+5. **Evite ações síncronas em loops**:
+```javascript
+// Exemplo de operação assíncrona em um loop
+async function processarItens(itens) {
+  for (let item of itens) {
+    await processarItem(item);
+  }
+}
+```
+
+6. **Manipulação adequada de erros**:
+```javascript
+// Exemplo de manipulação de erros com try/catch
+try {
+  // Código que pode lançar um erro
+} catch (error) {
+  // Lidar com o erro de forma apropriada
+  console.error("Ocorreu um erro:", error);
+}
+```
+
+7. **Comentários úteis**:
+```javascript
+// Exemplo de comentário explicativo
+// Calcula a área de um círculo com o raio especificado
+function calcularAreaCirculo(raio) {
+  return Math.PI * raio * raio;
+}
+```
+
+8. **Evite a pirâmide da morte**:
+```javascript
+// Exemplo de refatoração de código com muitos níveis de aninhamento
+function calcularPontuacaoFinal(jogador) {
+  let pontuacaoFinal = jogador.pontuacaoBase;
+
+  if (jogador.bonus) {
+    pontuacaoFinal += jogador.bonus;
+  }
+
+  if (jogador.nivel === "profissional") {
+    pontuacaoFinal *= 2;
+  }
+
+  return pontuacaoFinal;
+}
+```
+
+9. **Testes unitários**:
+```javascript
+// Exemplo de teste unitário usando Jest
+function somar(a, b) {
+  return a + b;
+}
+
+test('soma 1 + 2 para dar 3', () => {
+  expect(somar(1, 2)).toBe(3);
+});
+```
+
+10. **Mantenha seu código limpo e organizado**:
+```javascript
+// Exemplo de código formatado de forma consistente com ESLint
+function calcularAreaTriangulo(base, altura) {
+  return (base * altura) / 2;
+}
+```
+
+Esses exemplos ilustram como aplicar as boas práticas em JavaScript em situações do mundo real.
 10. **Mantenha seu código limpo e organizado**: Siga convenções de formatação consistentes, como o estilo de código definido pelo ESLint ou Prettier. Isso ajuda a manter seu código limpo e fácil de ler.
 
 Essas são apenas algumas das boas práticas em JavaScript. À medida que você ganha mais experiência, aprenderá mais dicas e técnicas para melhorar seu código ainda mais.
