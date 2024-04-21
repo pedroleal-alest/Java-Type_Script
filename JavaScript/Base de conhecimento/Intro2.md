@@ -197,3 +197,51 @@ var str = arr.toString(); // str será "1,2,3"
 ```
 
 Esses são alguns exemplos básicos de conversão de valores em JavaScript. É importante entender como essas conversões funcionam para evitar comportamentos inesperados em seu código. Além disso, é sempre uma boa prática garantir que os valores estejam no tipo correto antes de realizar operações importantes.
+
+## Math
+
+Em JavaScript, o objeto `Math` fornece um conjunto de propriedades e métodos para realizar operações matemáticas. Ele é uma biblioteca embutida que contém funções para cálculos matemáticos comuns, como potenciação, raiz quadrada, trigonometria, entre outros. Aqui estão algumas das principais funcionalidades oferecidas pelo objeto `Math`:
+
+1. **Constantes Matemáticas**: O objeto `Math` inclui várias constantes matemáticas úteis, como π (pi) e e (base do logaritmo natural).
+
+```javascript
+console.log(Math.PI); // Exibe o valor de π (aproximadamente 3.141592653589793)
+console.log(Math.E);  // Exibe o valor de e (aproximadamente 2.718281828459045)
+```
+
+2. **Funções Trigonométricas**: O `Math` fornece funções trigonométricas como seno, cosseno e tangente, bem como suas inversas.
+
+```javascript
+var angulo = 45 * (Math.PI / 180); // Converte o ângulo para radianos
+console.log(Math.sin(angulo));     // Calcula o seno do ângulo
+console.log(Math.cos(angulo));     // Calcula o cosseno do ângulo
+console.log(Math.tan(angulo));     // Calcula a tangente do ângulo
+```
+
+3. **Funções de Potência e Raiz**: O `Math` inclui funções para calcular potências, raízes quadradas e cubos.
+
+```javascript
+console.log(Math.pow(2, 3));   // Calcula 2 elevado à potência de 3 (2^3)
+console.log(Math.sqrt(16));    // Calcula a raiz quadrada de 16
+console.log(Math.cbrt(27));    // Calcula a raiz cúbica de 27
+```
+
+4. **Funções de Arredondamento e Truncamento**: O `Math` possui métodos para arredondar valores para o inteiro mais próximo, para cima, para baixo e para truncar valores decimais.
+
+```javascript
+console.log(Math.round(4.6));  // Arredonda para o inteiro mais próximo (5)
+console.log(Math.ceil(4.3));   // Arredonda para cima (5)
+console.log(Math.floor(4.9));  // Arredonda para baixo (4)
+console.log(Math.trunc(4.7));  // Trunca para o valor inteiro (4)
+```
+
+5. **Funções de Aleatoriedade**: O `Math` inclui métodos para gerar números aleatórios.
+
+```javascript
+console.log(Math.random());    // Gera um número aleatório entre 0 (inclusive) e 1 (exclusivo)
+```
+
+Esses são apenas alguns exemplos das muitas funcionalidades oferecidas pelo objeto `Math` em JavaScript. Ele é extremamente útil para realizar uma ampla variedade de cálculos matemáticos em seus programas.
+
+
+
