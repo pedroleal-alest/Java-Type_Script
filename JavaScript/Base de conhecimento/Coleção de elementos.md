@@ -237,6 +237,52 @@ Para percorrer uma lista em JavaScript, você pode usar várias abordagens, como
 
 Cada uma dessas abordagens tem suas próprias vantagens e pode ser usada dependendo das suas necessidades e preferências. O loop `for` é mais versátil e pode ser usado em situações onde você precisa acessar o índice dos elementos. O loop `for...of` e o método `forEach()` são mais concisos e geralmente são preferidos para iterações simples sobre os elementos da lista.
 
+## Operadores de condição em Arrays
+
+Em JavaScript, os operadores de condição em arrays são utilizados para filtrar, verificar e manipular elementos dentro de arrays com base em certas condições. Os operadores mais comuns para realizar essas operações são `filter()`, `map()`, `reduce()`, `some()` e `every()`.
+
+1. **filter()**: Este método cria um novo array com todos os elementos que passam por um teste implementado pela função fornecida.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4]
+```
+
+2. **map()**: Este método cria um novo array com os resultados da chamada de uma função para cada elemento do array original.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+```
+
+3. **reduce()**: Este método executa uma função redutora em cada elemento do array, resultando em um único valor de retorno.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sum); // Output: 15
+```
+
+4. **some()**: Este método verifica se pelo menos um elemento do array passa no teste implementado pela função fornecida.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven); // Output: true
+```
+
+5. **every()**: Este método verifica se todos os elementos do array passam no teste implementado pela função fornecida.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const allEven = numbers.every(num => num % 2 === 0);
+console.log(allEven); // Output: false
+```
+
+Esses operadores de condição em arrays são muito úteis para lidar com coleções de dados em JavaScript de forma eficiente e concisa.
+
 ## Objects
 
 Em JavaScript, objetos são uma das estruturas de dados mais fundamentais e versáteis. Eles são usados para representar conjuntos de pares chave-valor, onde cada chave é única e está associada a um valor correspondente. Os objetos em JavaScript são essenciais para organizar e manipular dados de maneira eficiente e flexível.
@@ -368,3 +414,99 @@ Em JavaScript, o tipo `Object` é uma classe global que serve como a raiz do pro
    ```
 
 Esses são apenas alguns dos métodos disponíveis no objeto `Object` em JavaScript. Eles são frequentemente usados para manipular e iterar sobre propriedades de objetos, copiar objetos, verificar propriedades e congelar objetos para evitar modificações acidentais.
+
+## Operadores de condição
+
+Em JavaScript, os operadores de condição em objetos são utilizados para verificar propriedades específicas de um objeto, verificar se um objeto atende a determinados critérios ou manipular objetos com base em certas condições. Aqui estão algumas das operações mais comuns:
+
+1. **Operador `in`**: O operador `in` verifica se um objeto possui uma determinada propriedade.
+
+```javascript
+const person = { name: "John", age: 30 };
+console.log("name" in person); // Output: true
+console.log("gender" in person); // Output: false
+```
+
+2. **Método `hasOwnProperty()`**: Este método verifica se um objeto possui uma propriedade própria (não herdada).
+
+```javascript
+const person = { name: "John", age: 30 };
+console.log(person.hasOwnProperty("name")); // Output: true
+console.log(person.hasOwnProperty("toString")); // Output: false
+```
+
+3. **Operador `instanceof`**: O operador `instanceof` verifica se um objeto é uma instância de um determinado tipo.
+
+```javascript
+const arr = [1, 2, 3];
+console.log(arr instanceof Array); // Output: true
+console.log(arr instanceof Object); // Output: true (todos os arrays são objetos em JavaScript)
+```
+
+4. **Operador de comparação de igualdade (`===`)**: Este operador é usado para comparar se dois objetos são idênticos (mesmo objeto na memória).
+
+```javascript
+const obj1 = { name: "John" };
+const obj2 = { name: "John" };
+console.log(obj1 === obj2); // Output: false
+```
+
+5. **Operador de comparação de igualdade (`==`) ou `Object.is()`: Podem ser usados para verificar a igualdade de valor entre objetos.
+
+```javascript
+const obj1 = { name: "John" };
+const obj2 = { name: "John" };
+console.log(obj1 == obj2); // Output: false
+console.log(Object.is(obj1, obj2)); // Output: false
+```
+
+6. **Operador ternário**: O operador ternário (`? :`) pode ser usado para fazer condições em objetos e retornar diferentes valores com base nessas condições.
+
+```javascript
+const person = { name: "John", age: 30 };
+const canVote = person.age >= 18 ? "Yes" : "No";
+console.log(canVote); // Output: "Yes"
+```
+
+Esses operadores e métodos oferecem maneiras de realizar operações condicionais em objetos em JavaScript, permitindo uma manipulação flexível e eficaz dos dados do objeto.
+
+## Alterar valores em Objects
+
+Para alterar valores em objetos JavaScript, você pode acessar a propriedade desejada do objeto e atribuir um novo valor a ela. Existem algumas maneiras diferentes de fazer isso, dependendo do que você está tentando alcançar.
+
+1. **Atribuição direta**:
+
+```javascript
+const person = { name: "John", age: 30 };
+person.age = 35; // Alterando o valor da propriedade 'age'
+console.log(person); // Output: { name: "John", age: 35 }
+```
+
+2. **Adição de nova propriedade**:
+
+```javascript
+const person = { name: "John", age: 30 };
+person.gender = "Male"; // Adicionando uma nova propriedade 'gender'
+console.log(person); // Output: { name: "John", age: 30, gender: "Male" }
+```
+
+3. **Atribuição com base em variáveis**:
+
+```javascript
+const person = { name: "John", age: 30 };
+const newAge = 35;
+person.age = newAge; // Alterando o valor da propriedade 'age' com base em uma variável
+console.log(person); // Output: { name: "John", age: 35 }
+```
+
+4. **Remoção de propriedades**:
+
+```javascript
+const person = { name: "John", age: 30 };
+delete person.age; // Removendo a propriedade 'age'
+console.log(person); // Output: { name: "John" }
+```
+
+Lembre-se de que, ao modificar objetos em JavaScript, você está manipulando a referência ao objeto, não uma cópia do objeto. Portanto, qualquer alteração feita no objeto será refletida em todas as referências a ele.
+
+Se você precisar copiar um objeto antes de modificá-lo para manter o original intacto, pode usar várias técnicas de clonagem, como espalhamento (`...`), `Object.assign()`, ou bibliotecas como o Lodash.
