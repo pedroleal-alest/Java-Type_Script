@@ -469,3 +469,44 @@ console.log(canVote); // Output: "Yes"
 ```
 
 Esses operadores e métodos oferecem maneiras de realizar operações condicionais em objetos em JavaScript, permitindo uma manipulação flexível e eficaz dos dados do objeto.
+
+## Alterar valores em Objects
+
+Para alterar valores em objetos JavaScript, você pode acessar a propriedade desejada do objeto e atribuir um novo valor a ela. Existem algumas maneiras diferentes de fazer isso, dependendo do que você está tentando alcançar.
+
+1. **Atribuição direta**:
+
+```javascript
+const person = { name: "John", age: 30 };
+person.age = 35; // Alterando o valor da propriedade 'age'
+console.log(person); // Output: { name: "John", age: 35 }
+```
+
+2. **Adição de nova propriedade**:
+
+```javascript
+const person = { name: "John", age: 30 };
+person.gender = "Male"; // Adicionando uma nova propriedade 'gender'
+console.log(person); // Output: { name: "John", age: 30, gender: "Male" }
+```
+
+3. **Atribuição com base em variáveis**:
+
+```javascript
+const person = { name: "John", age: 30 };
+const newAge = 35;
+person.age = newAge; // Alterando o valor da propriedade 'age' com base em uma variável
+console.log(person); // Output: { name: "John", age: 35 }
+```
+
+4. **Remoção de propriedades**:
+
+```javascript
+const person = { name: "John", age: 30 };
+delete person.age; // Removendo a propriedade 'age'
+console.log(person); // Output: { name: "John" }
+```
+
+Lembre-se de que, ao modificar objetos em JavaScript, você está manipulando a referência ao objeto, não uma cópia do objeto. Portanto, qualquer alteração feita no objeto será refletida em todas as referências a ele.
+
+Se você precisar copiar um objeto antes de modificá-lo para manter o original intacto, pode usar várias técnicas de clonagem, como espalhamento (`...`), `Object.assign()`, ou bibliotecas como o Lodash.
