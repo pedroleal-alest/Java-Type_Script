@@ -371,6 +371,57 @@ O controle de fluxo em JavaScript refere-se à maneira como você pode direciona
 
 Essas são algumas das principais construções de controle de fluxo em JavaScript que permitem controlar o comportamento do seu código com base em condições e iterações. Dominar esses conceitos é essencial para escrever código JavaScript funcional e eficiente.
 
+### Switch/Case & Switch expression
+
+1. **Switch/Case comum**:
+
+   - **Sintaxe**:
+     ```javascript
+     switch (expressao) {
+       case valor1:
+         // código a ser executado se expressao for igual a valor1
+         break;
+       case valor2:
+         // código a ser executado se expressao for igual a valor2
+         break;
+       // outros casos
+       default:
+         // código a ser executado se nenhum dos casos anteriores for correspondido
+     }
+     ```
+
+   - **Características**:
+     - Os valores dos casos são comparados diretamente com a expressão.
+     - A necessidade de `break` após cada caso para evitar a execução dos casos seguintes.
+     - Pode se tornar verboso quando muitos casos estão envolvidos.
+
+2. **Switch com Expressão**:
+
+   - **Sintaxe**:
+     ```javascript
+     switch (expressao) {
+       case valor1 -> 
+         // código a ser executado se expressao for igual a valor1
+       case valor2 -> 
+         // código a ser executado se expressao for igual a valor2
+       // outros casos
+       default -> 
+         // código a ser executado se nenhum dos casos anteriores for correspondido
+     }
+     ```
+
+   - **Características**:
+     - Os valores dos casos ainda são comparados com a expressão.
+     - Não há necessidade de `break`, pois a execução do caso seguinte é interrompida automaticamente.
+     - Mais conciso e limpo em comparação com o switch/case comum, especialmente para casos simples.
+
+3. **Uso**:
+
+   - O "switch/case comum" é amplamente utilizado em JavaScript e em muitas outras linguagens de programação, especialmente quando a lógica precisa ser dividida em muitos casos diferentes.
+   - O "switch com expressão" é uma adição mais recente ao JavaScript, introduzida no ES2022 (ECMAScript 2022), e é preferível em situações onde a lógica é mais simples e a concisão é desejada.
+
+Ambos os métodos podem ser úteis dependendo da complexidade e dos requisitos do seu código. O importante é escolher o método que seja mais claro e legível para a sua situação específica.
+
 ## Controle de erros
 
 O controle de erros em JavaScript é essencial para lidar com situações inesperadas que podem ocorrer durante a execução do seu código. Isso inclui erros de sintaxe, erros de tempo de execução e erros lógicos. Aqui estão algumas maneiras de lidar com o controle de erros em JavaScript:
