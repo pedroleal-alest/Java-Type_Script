@@ -243,5 +243,64 @@ console.log(Math.random());    // Gera um número aleatório entre 0 (inclusive)
 
 Esses são apenas alguns exemplos das muitas funcionalidades oferecidas pelo objeto `Math` em JavaScript. Ele é extremamente útil para realizar uma ampla variedade de cálculos matemáticos em seus programas.
 
+## Data
 
+Em JavaScript, o objeto `Date` é usado para trabalhar com datas e horários. Ele permite a criação, manipulação e formatação de datas de acordo com as necessidades do programador. Aqui estão alguns aspectos importantes sobre o objeto `Date`:
+
+1. **Criação de objetos Date**: Você pode criar um objeto `Date` de várias maneiras. Pode ser criado com a palavra-chave `new` seguida pelo construtor `Date()` sem parâmetros, o que retorna a data e hora atuais, ou pode ser passado um valor numérico representando o tempo em milissegundos desde 1 de janeiro de 1970 (Epoch time).
+
+   Exemplo:
+   ```javascript
+   let dataAtual = new Date(); // data e hora atuais
+   let dataEspecifica = new Date(2024, 3, 22); // 22 de abril de 2024
+   let dataEpoch = new Date(0); // 1 de janeiro de 1970
+   ```
+
+2. **Manipulação de datas**: O objeto `Date` permite a manipulação de diferentes componentes de data e hora, como ano, mês, dia, hora, minuto, segundo e milissegundo.
+
+   Exemplo:
+   ```javascript
+   let data = new Date();
+   let ano = data.getFullYear();
+   let mes = data.getMonth(); // Janeiro é 0, Fevereiro é 1, e assim por diante
+   let dia = data.getDate();
+   let hora = data.getHours();
+   let minutos = data.getMinutes();
+   ```
+
+3. **Formatação de datas**: O objeto `Date` não possui métodos integrados para formatação de datas, mas é possível criar formatos personalizados combinando seus métodos.
+
+   Exemplo:
+   ```javascript
+   let data = new Date();
+   let formatoData = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`;
+   let formatoHora = `${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`;
+   ```
+
+4. **Operações com datas**: O objeto `Date` permite realizar operações de adição e subtração de dias, meses, horas, etc.
+
+   Exemplo:
+   ```javascript
+   let data = new Date();
+   data.setDate(data.getDate() + 7); // Adiciona 7 dias à data atual
+   data.setMonth(data.getMonth() - 1); // Subtrai 1 mês da data atual
+   ```
+
+5. **Comparação de datas**: Você pode comparar datas usando operadores de comparação padrão, como `<`, `>`, `<=` e `>=`.
+
+   Exemplo:
+   ```javascript
+   let data1 = new Date(2024, 3, 22);
+   let data2 = new Date(2024, 3, 23);
+
+   if (data1 < data2) {
+       console.log("data1 vem antes de data2");
+   } else if (data1 > data2) {
+       console.log("data1 vem depois de data2");
+   } else {
+       console.log("As datas são iguais");
+   }
+   ```
+
+O objeto `Date` em JavaScript é bastante versátil e poderoso, oferecendo uma ampla gama de funcionalidades para lidar com operações relacionadas a datas e horários.
 
